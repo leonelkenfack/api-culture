@@ -14,9 +14,75 @@ api = Api(
 ns = api.namespace('api/v1', description='Chemin api')
 
 rotation_input = api.model('RotationInput', {
-    'culture_name': fields.String(required=True, description='Nom de la culture actuelle'),
-    'region_name': fields.String(required=True, description='Nom de la région'),
-    'climate_name': fields.String(required=True, description='Type de climat')
+    'culture_name': fields.String(required=True, description='''Nom de la culture actuelle:
+- Mais
+- Mil
+- Arachide
+- Haricots
+- Plantain
+- Banane
+- Manioc
+- Igname
+- Tomate
+- Piment
+- Aubergine
+- Coton
+- Tabac
+- Sorgho
+- Riz
+- Niebe
+- Voandzou
+- Sesame
+- Patate
+- Taro
+- Brachiaria
+- Soja
+- Mucuna
+- Crotalaria
+- Dolichos
+- PalmierHuile
+- Caoutchouc
+- PommeDeTerre
+- Poivre
+- Okra
+- Macabo
+- Cacao
+- Tournesol
+- Ndole
+- Mangue
+- Papaye
+- Ananas
+- Avocat
+- Basilic
+- Gingembre
+- Citronnelle
+- Goyave
+- Melon
+- Pastèque
+- Corossol
+- Rambutan
+- Mangoustan
+'''),
+    'region_name': fields.String(required=True, description='''Nom de la région :
+- Nord (Adamaoua compris)
+- Sud
+- Centre
+- Ouest
+- Est
+- NordOuest
+- SudOuest
+- ExtremeNord
+- Littoral
+- ZonesIrriguees'''),
+    'climate_name': fields.String(required=True, 
+        description="""Type de climat
+- Tropical
+- TropicalHumide
+- TropicalSec
+- SemiAride
+- Temperé
+- TemperéChaud
+TropicalTemperé""")
 })
 
 culture_model = api.model('Culture', {
