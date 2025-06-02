@@ -1,0 +1,1648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:cultures="http://example.org/cultures#">
+
+    <!-- Définition des propriétés de relation -->
+    <owl:ObjectProperty rdf:about="http://example.org/cultures#belongsToFamily">
+        <rdfs:label xml:lang="fr">appartient à la famille</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/cultures#Crop"/>
+        <rdfs:range rdf:resource="http://example.org/cultures#Family"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://example.org/cultures#hasClimate">
+        <rdfs:label xml:lang="fr">a pour climat</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/cultures#Crop"/>
+        <rdfs:range rdf:resource="http://example.org/cultures#Climate"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://example.org/cultures#grownInRegion">
+        <rdfs:label xml:lang="fr">cultivé dans la région</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/cultures#Crop"/>
+        <rdfs:range rdf:resource="http://example.org/cultures#Region"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://example.org/cultures#hasType">
+        <rdfs:label xml:lang="fr">a pour type</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/cultures#Crop"/>
+        <rdfs:range rdf:resource="http://example.org/cultures#Type"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://example.org/cultures#consumesNutrient">
+        <rdfs:label xml:lang="fr">consomme le nutriment</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/cultures#Crop"/>
+        <rdfs:range rdf:resource="http://example.org/cultures#Nutrient"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://example.org/cultures#addsNutrient">
+        <rdfs:label xml:lang="fr">ajoute le nutriment</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/cultures#Crop"/>
+        <rdfs:range rdf:resource="http://example.org/cultures#Nutrient"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://example.org/cultures#sensitiveToDisease">
+        <rdfs:label xml:lang="fr">sensible à la maladie</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/cultures#Crop"/>
+        <rdfs:range rdf:resource="http://example.org/cultures#Disease"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://example.org/cultures#canCorrectDisease">
+        <rdfs:label xml:lang="fr">peut corriger la maladie</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/cultures#Crop"/>
+        <rdfs:range rdf:resource="http://example.org/cultures#Disease"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://example.org/cultures#canCreateDisease">
+        <rdfs:label xml:lang="fr">peut créer la maladie</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/cultures#Crop"/>
+        <rdfs:range rdf:resource="http://example.org/cultures#Disease"/>
+    </owl:ObjectProperty>
+
+    <!-- Relations pour le Maïs -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Mais">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Poacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalTemperé"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Nord"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Centre"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Ouest"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Molybdene"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PythiumSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#RalstoniaSolanacearum"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Mil -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Mil">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Poacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#SemiAride"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Nord"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#SclerosporaGraminicola"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PucciniaSubstriata"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MacrophominaPhaseolina"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#VerticilliumDahliae"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Sorgho -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Sorgho">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Poacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#SemiAride"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Nord"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#ExtremeNord"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#ColletotrichumGraminicola"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PucciniaPurpurea"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PeronosclerosporaSorghi"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#VerticilliumDahliae"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour l'Arachide -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Arachide">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Fabacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalSec"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Rente"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Nord"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#CercosporaArachidicola"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneArenaria"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#VirusRosette"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RalstoniaSolanacearum"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour les Haricots -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Haricots">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Fabacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#Temperé"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Ouest"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#NordOuest"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#ColletotrichumLindemuthianum"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RalstoniaSolanacearum"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Riz -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Riz">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Poacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Rente"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Nord"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#ZonesIrriguees"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Molybdene"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MagnaportheOryzae"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#HelminthosporiumOryzae"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#XanthomonasOryzae"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#VerticilliumDahliae"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#PythiumSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MagnaportheSalvinii"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#CochliobolusMiyabeanus"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#CurvulariaSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Brachiaria -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Brachiaria">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Poacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Couverture"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Diverses"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#CercosporaSpp"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Niébé -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Niebe">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Fabacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Couverture"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Nord"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#VirusMosaique"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RalstoniaSolanacearum"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Soja -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Soja">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Fabacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Rente"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Centre"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Molybdene"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumVirguliforme"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#HeteroderaGlycines"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RalstoniaSolanacearum"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Mucuna -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Mucuna">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Fabacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Couverture"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RalstoniaSolanacearum"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Crotalaria -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Crotalaria">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Fabacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Couverture"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Centre"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RalstoniaSolanacearum"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Dolichos -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Dolichos">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Fabacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Couverture"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Centre"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RalstoniaSolanacearum"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Plantain -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Plantain">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Musacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Centre"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Littoral"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumOxysporumCubense"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#RadopholusSimilis"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#RhizoctoniaSpp"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#VerticilliumDahliae"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumOxysporumCubense"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RalstoniaSolanacearum"/>
+    </cultures:Crop>
+
+    <!-- Relations pour la Banane -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Banane">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Musacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Rente"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#SudOuest"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Littoral"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Ouest"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Centre"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumOxysporumCubense"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#RadopholusSimilis"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#RhizoctoniaSpp"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#VerticilliumDahliae"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumOxysporumCubense"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RalstoniaSolanacearum"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Manioc -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Manioc">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Euphorbiacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Centre"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Est"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#Virus"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#VerticilliumDahliae"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#SclerotiumRolfsii"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RalstoniaSolanacearum"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Palmier à huile -->
+    <cultures:Crop rdf:about="http://example.org/cultures#PalmierHuile">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Euphorbiacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Rente"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Littoral"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#GanodermaBoninense"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#GanodermaBoninense"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Caoutchouc -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Caoutchouc">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Euphorbiacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Rente"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#SudOuest"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RigidoporusMicroporus"/>
+    </cultures:Crop>
+
+    <!-- Relations pour l'Igname -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Igname">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Dioscoreacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Ouest"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Centre"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#VerticilliumDahliae"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#PythiumSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour la Pomme de terre -->
+    <cultures:Crop rdf:about="http://example.org/cultures#PommeDeTerre">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Solanacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TemperéFrais"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Ouest"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PhytophthoraInfestans"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#AlternariaSolani"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#StreptomycesScabies"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RalstoniaSolanacearum"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Poivre -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Poivre">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Piperaceae"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Rente"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PhytophthoraCapsici"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#PhytophthoraCapsici"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Coton -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Coton">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Malvacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalSec"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Rente"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Nord"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#VerticilliumDahliae"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumOxysporumVasinfectum"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#VerticilliumDahliae"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour l'Okra -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Okra">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Malvacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Centre"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#VerticilliumDahliae"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#XanthomonasAxonopodisMalvacearum"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Macabo -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Macabo">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Aracees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Centre"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PythiumSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#VerticilliumDahliae"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#PythiumSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Taro -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Taro">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Aracees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PythiumSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#VerticilliumDahliae"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#PythiumSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Cacao -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Cacao">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Sterculiacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Rente"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#SudOuest"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#PhytophthoraPalmivora"/>
+    </cultures:Crop>
+
+    <!-- Relations pour la Cola -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Cola">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Sterculiacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Medicinale"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Stimulante"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Tournesol -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Tournesol">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Asteracees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TemperéTropical"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Oleagineux"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Diverses"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#SclerotiniaSclerotiorum"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#VerticilliumDahliae"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#VerticilliumDahliae"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#SclerotiniaSclerotiorum"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Ndolé -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Ndole">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Asteracees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#LegumeFeuille"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Centre"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#VerticilliumDahliae"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+    </cultures:Crop>
+
+    <!-- Relations pour la Mangue -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Mangue">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Anacardiacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Rente"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Nord"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Littoral"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#SudOuest"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Centre"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#PhytophthoraCinnamomi"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour la Papaye -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Papaye">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Caricacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Rente"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Centre"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Littoral"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#SudOuest"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#PhytophthoraPalmivora"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour l'Ananas -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Ananas">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Bromeliacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Rente"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Centre"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Littoral"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Ouest"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#SudOuest"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Molybdene"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#VerticilliumDahliae"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#PhytophthoraCinnamomi"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour l'Avocat -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Avocat">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Lauracees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TemperéTropical"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Rente"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Ouest"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Littoral"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Centre"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#NordOuest"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Molybdene"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PhytophthoraCinnamomi"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#PhytophthoraCinnamomi"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Basilic -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Basilic">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Lamiacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Medicinale"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Molybdene"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PeronosporaBelbahrii"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RhizoctoniaSolani"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#PythiumSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Gingembre -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Gingembre">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Zingiberacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Medicinale"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Rente"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Molybdene"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#RalstoniaSolanacearum"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PythiumSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#RalstoniaSolanacearum"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#PythiumAphanidermatum"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+    </cultures:Crop>
+
+    <!-- Relations pour la Patate douce -->
+    <cultures:Crop rdf:about="http://example.org/cultures#PatateDouce">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Convolvulacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalTemperé"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Centre"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Ouest"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Molybdene"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#CeratocystisFimbriata"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#RhizopusStolonifer"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#SclerotiumRolfsii"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#GeotrichumCandidum"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#VerticilliumDahliae"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#CeratocystisFimbriata"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MonilochaetesInfuscans"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour la Citronnelle -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Citronnelle">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Poacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Medicinale"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Aromatique"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Centre"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Molybdene"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour la Goyave -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Goyave">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Myrtacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Medicinale"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Centre"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Littoral"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Molybdene"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PhytophthoraNicotianae"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#PhytophthoraCinnamomi"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Melon -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Melon">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Cucurbitacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalTemperé"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Nord"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Centre"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Littoral"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Molybdene"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PseudoperonosporaCubensis"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#ColletotrichumOrbiculare"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#VerticilliumDahliae"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumOxysporumFspMelonis"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MonosporascusCannonballus"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour la Pastèque -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Pasteque">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Cucurbitacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalChaud"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Nord"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Centre"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Littoral"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#ExtremeNord"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Molybdene"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#ColletotrichumOrbiculare"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+
+        <!-- Maladies corrigées -->
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#FusariumOxysporum"/>
+        <cultures:canCorrectDisease rdf:resource="http://example.org/cultures#VerticilliumDahliae"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumOxysporumFspNiveum"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MonosporascusCannonballus"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Corossol -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Corossol">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Annonacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Medicinale"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Centre"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Molybdene"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#FusariumSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Rambutan -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Rambutan">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Sapindacees"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Rente"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#SudOuest"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Molybdene"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+    </cultures:Crop>
+
+    <!-- Relations pour le Mangoustan -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Mangoustan">
+        <cultures:belongsToFamily rdf:resource="http://example.org/cultures#Clusiaceae"/>
+        <cultures:hasClimate rdf:resource="http://example.org/cultures#TropicalHumide"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Vivriere"/>
+        <cultures:hasType rdf:resource="http://example.org/cultures#Rente"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#Sud"/>
+        <cultures:grownInRegion rdf:resource="http://example.org/cultures#SudOuest"/>
+        
+        <!-- Nutriments consommés -->
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Calcium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Magnesium"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Fer"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Manganese"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Zinc"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Cuivre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Soufre"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Bore"/>
+        <cultures:consumesNutrient rdf:resource="http://example.org/cultures#Molybdene"/>
+
+        <!-- Nutriments ajoutés -->
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Azote"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Phosphore"/>
+        <cultures:addsNutrient rdf:resource="http://example.org/cultures#Potassium"/>
+
+        <!-- Maladies sensibles -->
+        <cultures:sensitiveToDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+
+        <!-- Maladies créées -->
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#PhytophthoraSpp"/>
+        <cultures:canCreateDisease rdf:resource="http://example.org/cultures#MeloidogyneSpp"/>
+    </cultures:Crop>
+
+</rdf:RDF> 

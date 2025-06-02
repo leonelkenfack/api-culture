@@ -1,0 +1,30 @@
+services:
+  graphdb:
+    image: ontotext/graphdb:10.8.7
+    container_name: graphdb-instance-name
+    ports:
+      - "7200:7200"
+    volumes:
+      - ./graphdb:/opt/graphdb/home
+    tty: true
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: flask-api
+    ports:
+      - "5200:5000"
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
+    volumes:
+      - .:/app
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

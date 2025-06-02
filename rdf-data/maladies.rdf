@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:cultures="http://example.org/cultures#">
+
+    <!-- Définition de la classe Maladie -->
+    <owl:Class rdf:about="http://example.org/cultures#Disease">
+        <rdfs:label xml:lang="fr">Maladie</rdfs:label>
+    </owl:Class>
+
+    <!-- Maladies fongiques -->
+    <cultures:Disease rdf:about="http://example.org/cultures#FusariumSpp">
+        <rdfs:label xml:lang="fr">Fusarium spp.</rdfs:label>
+        <rdfs:comment xml:lang="fr">Champignon pathogène causant la pourriture des racines</rdfs:comment>
+    </cultures:Disease>
+
+    <cultures:Disease rdf:about="http://example.org/cultures#RhizoctoniaSolani">
+        <rdfs:label xml:lang="fr">Rhizoctonia solani</rdfs:label>
+        <rdfs:comment xml:lang="fr">Champignon causant la pourriture des racines et des tiges</rdfs:comment>
+    </cultures:Disease>
+
+    <cultures:Disease rdf:about="http://example.org/cultures#PythiumSpp">
+        <rdfs:label xml:lang="fr">Pythium spp.</rdfs:label>
+        <rdfs:comment xml:lang="fr">Champignon causant la fonte des semis</rdfs:comment>
+    </cultures:Disease>
+
+    <cultures:Disease rdf:about="http://example.org/cultures#PhytophthoraSpp">
+        <rdfs:label xml:lang="fr">Phytophthora spp.</rdfs:label>
+        <rdfs:comment xml:lang="fr">Champignon causant la pourriture des racines et des tiges</rdfs:comment>
+    </cultures:Disease>
+
+    <!-- Nématodes -->
+    <cultures:Disease rdf:about="http://example.org/cultures#MeloidogyneSpp">
+        <rdfs:label xml:lang="fr">Meloidogyne spp.</rdfs:label>
+        <rdfs:comment xml:lang="fr">Nématodes à galles des racines</rdfs:comment>
+    </cultures:Disease>
+
+    <!-- Bactéries -->
+    <cultures:Disease rdf:about="http://example.org/cultures#RalstoniaSolanacearum">
+        <rdfs:label xml:lang="fr">Ralstonia solanacearum</rdfs:label>
+        <rdfs:comment xml:lang="fr">Bactérie causant le flétrissement bactérien</rdfs:comment>
+    </cultures:Disease>
+
+    <cultures:Disease rdf:about="http://example.org/cultures#XanthomonasOryzae">
+        <rdfs:label xml:lang="fr">Xanthomonas oryzae pv. oryzae</rdfs:label>
+        <rdfs:comment xml:lang="fr">Bactérie causant la brûlure bactérienne du riz</rdfs:comment>
+    </cultures:Disease>
+
+    <!-- Virus -->
+    <cultures:Disease rdf:about="http://example.org/cultures#VirusMosaique">
+        <rdfs:label xml:lang="fr">Virus de la mosaïque</rdfs:label>
+        <rdfs:comment xml:lang="fr">Virus causant des symptômes de mosaïque sur les feuilles</rdfs:comment>
+    </cultures:Disease>
+
+    <cultures:Disease rdf:about="http://example.org/cultures#VirusRosette">
+        <rdfs:label xml:lang="fr">Virus de la rosette</rdfs:label>
+        <rdfs:comment xml:lang="fr">Virus affectant la croissance des plantes</rdfs:comment>
+    </cultures:Disease>
+
+    <!-- Autres maladies -->
+    <cultures:Disease rdf:about="http://example.org/cultures#SclerotiniaSclerotiorum">
+        <rdfs:label xml:lang="fr">Sclerotinia sclerotiorum</rdfs:label>
+        <rdfs:comment xml:lang="fr">Champignon causant la pourriture blanche</rdfs:comment>
+    </cultures:Disease>
+
+    <cultures:Disease rdf:about="http://example.org/cultures#GanodermaBoninense">
+        <rdfs:label xml:lang="fr">Ganoderma boninense</rdfs:label>
+        <rdfs:comment xml:lang="fr">Champignon causant la pourriture basale du palmier</rdfs:comment>
+    </cultures:Disease>
+
+    <cultures:Disease rdf:about="http://example.org/cultures#MagnaportheOryzae">
+        <rdfs:label xml:lang="fr">Magnaporthe oryzae</rdfs:label>
+        <rdfs:comment xml:lang="fr">Champignon causant la pyriculariose du riz</rdfs:comment>
+    </cultures:Disease>
+
+    <cultures:Disease rdf:about="http://example.org/cultures#ColletotrichumGraminicola">
+        <rdfs:label xml:lang="fr">Colletotrichum graminicola</rdfs:label>
+        <rdfs:comment xml:lang="fr">Champignon causant l'anthracnose</rdfs:comment>
+    </cultures:Disease>
+
+    <cultures:Disease rdf:about="http://example.org/cultures#PucciniaPurpurea">
+        <rdfs:label xml:lang="fr">Puccinia purpurea</rdfs:label>
+        <rdfs:comment xml:lang="fr">Champignon causant la rouille du sorgho</rdfs:comment>
+    </cultures:Disease>
+
+    <cultures:Disease rdf:about="http://example.org/cultures#PeronosclerosporaSorghi">
+        <rdfs:label xml:lang="fr">Peronosclerospora sorghi</rdfs:label>
+        <rdfs:comment xml:lang="fr">Champignon causant le mildiou du sorgho</rdfs:comment>
+    </cultures:Disease>
+
+</rdf:RDF> 

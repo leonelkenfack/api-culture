@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:cultures="http://example.org/cultures#">
+
+    <!-- Définition de la classe Région -->
+    <owl:Class rdf:about="http://example.org/cultures#Region">
+        <rdfs:label xml:lang="fr">Région</rdfs:label>
+    </owl:Class>
+
+    <!-- Régions -->
+    <cultures:Region rdf:about="http://example.org/cultures#Nord">
+        <rdfs:label xml:lang="fr">Nord</rdfs:label>
+        <rdfs:comment xml:lang="fr">Région septentrionale du pays</rdfs:comment>
+    </cultures:Region>
+
+    <cultures:Region rdf:about="http://example.org/cultures#Sud">
+        <rdfs:label xml:lang="fr">Sud</rdfs:label>
+        <rdfs:comment xml:lang="fr">Région méridionale du pays</rdfs:comment>
+    </cultures:Region>
+
+    <cultures:Region rdf:about="http://example.org/cultures#Centre">
+        <rdfs:label xml:lang="fr">Centre</rdfs:label>
+        <rdfs:comment xml:lang="fr">Région centrale du pays</rdfs:comment>
+    </cultures:Region>
+
+    <cultures:Region rdf:about="http://example.org/cultures#Ouest">
+        <rdfs:label xml:lang="fr">Ouest</rdfs:label>
+        <rdfs:comment xml:lang="fr">Région occidentale du pays</rdfs:comment>
+    </cultures:Region>
+
+    <cultures:Region rdf:about="http://example.org/cultures#Est">
+        <rdfs:label xml:lang="fr">Est</rdfs:label>
+        <rdfs:comment xml:lang="fr">Région orientale du pays</rdfs:comment>
+    </cultures:Region>
+
+    <cultures:Region rdf:about="http://example.org/cultures#NordOuest">
+        <rdfs:label xml:lang="fr">Nord-Ouest</rdfs:label>
+        <rdfs:comment xml:lang="fr">Région nord-occidentale du pays</rdfs:comment>
+    </cultures:Region>
+
+    <cultures:Region rdf:about="http://example.org/cultures#SudOuest">
+        <rdfs:label xml:lang="fr">Sud-Ouest</rdfs:label>
+        <rdfs:comment xml:lang="fr">Région sud-occidentale du pays</rdfs:comment>
+    </cultures:Region>
+
+    <cultures:Region rdf:about="http://example.org/cultures#ExtremeNord">
+        <rdfs:label xml:lang="fr">Extrême-Nord</rdfs:label>
+        <rdfs:comment xml:lang="fr">Région la plus septentrionale du pays</rdfs:comment>
+    </cultures:Region>
+
+    <cultures:Region rdf:about="http://example.org/cultures#Littoral">
+        <rdfs:label xml:lang="fr">Littoral</rdfs:label>
+        <rdfs:comment xml:lang="fr">Région côtière du pays</rdfs:comment>
+    </cultures:Region>
+
+    <cultures:Region rdf:about="http://example.org/cultures#ZonesIrriguees">
+        <rdfs:label xml:lang="fr">Zones Irriguées</rdfs:label>
+        <rdfs:comment xml:lang="fr">Régions avec systèmes d'irrigation</rdfs:comment>
+    </cultures:Region>
+
+    <cultures:Region rdf:about="http://example.org/cultures#Diverses">
+        <rdfs:label xml:lang="fr">Diverses</rdfs:label>
+        <rdfs:comment xml:lang="fr">Régions variées du pays</rdfs:comment>
+    </cultures:Region>
+
+</rdf:RDF> 

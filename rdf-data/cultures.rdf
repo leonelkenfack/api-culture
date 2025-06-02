@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:cultures="http://example.org/cultures#">
+
+    <!-- Définition de la classe Culture -->
+    <owl:Class rdf:about="http://example.org/cultures#Crop">
+        <rdfs:label xml:lang="fr">Culture</rdfs:label>
+    </owl:Class>
+
+    <!-- Définition des propriétés de données -->
+    <owl:DatatypeProperty rdf:about="http://example.org/cultures#scientificName">
+        <rdfs:label xml:lang="fr">nom scientifique</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/cultures#Crop"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://example.org/cultures#cropName">
+        <rdfs:label xml:lang="fr">nom de la culture</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/cultures#Crop"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- Cultures -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Mais">
+        <cultures:scientificName>Zea mays</cultures:scientificName>
+        <cultures:cropName>Maïs</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Mil">
+        <cultures:scientificName>Pennisetum glaucum</cultures:scientificName>
+        <cultures:cropName>Mil</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Arachide">
+        <cultures:scientificName>Arachis hypogaea</cultures:scientificName>
+        <cultures:cropName>Arachide</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Haricots">
+        <cultures:scientificName>Phaseolus vulgaris</cultures:scientificName>
+        <cultures:cropName>Haricots</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Plantain">
+        <cultures:scientificName>Musa paradisiaca</cultures:scientificName>
+        <cultures:cropName>Plantain</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Banane">
+        <cultures:scientificName>Musa spp.</cultures:scientificName>
+        <cultures:cropName>Banane</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Manioc">
+        <cultures:scientificName>Manihot esculenta</cultures:scientificName>
+        <cultures:cropName>Manioc</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Igname">
+        <cultures:scientificName>Dioscorea spp.</cultures:scientificName>
+        <cultures:cropName>Igname</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Tomate">
+        <cultures:scientificName>Solanum lycopersicum</cultures:scientificName>
+        <cultures:cropName>Tomate</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Piment">
+        <cultures:scientificName>Capsicum spp.</cultures:scientificName>
+        <cultures:cropName>Piment</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Aubergine">
+        <cultures:scientificName>Solanum melongena</cultures:scientificName>
+        <cultures:cropName>Aubergine</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Coton">
+        <cultures:scientificName>Gossypium hirsutum</cultures:scientificName>
+        <cultures:cropName>Coton</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Tabac">
+        <cultures:scientificName>Nicotiana tabacum</cultures:scientificName>
+        <cultures:cropName>Tabac</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Sorgho">
+        <cultures:scientificName>Sorghum bicolor</cultures:scientificName>
+        <cultures:cropName>Sorgho</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Riz">
+        <cultures:scientificName>Oryza sativa</cultures:scientificName>
+        <cultures:cropName>Riz</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Niebe">
+        <cultures:scientificName>Vigna unguiculata</cultures:scientificName>
+        <cultures:cropName>Niébé</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Voandzou">
+        <cultures:scientificName>Vigna subterranea</cultures:scientificName>
+        <cultures:cropName>Voandzou</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Sesame">
+        <cultures:scientificName>Sesamum indicum</cultures:scientificName>
+        <cultures:cropName>Sésame</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Patate">
+        <cultures:scientificName>Ipomoea batatas</cultures:scientificName>
+        <cultures:cropName>Patate</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Taro">
+        <cultures:scientificName>Colocasia esculenta</cultures:scientificName>
+        <cultures:cropName>Taro</cultures:cropName>
+    </cultures:Crop>
+
+    <!-- Cultures manquantes -->
+    <cultures:Crop rdf:about="http://example.org/cultures#Brachiaria">
+        <cultures:scientificName>Brachiaria ruziziensis</cultures:scientificName>
+        <cultures:cropName>Brachiaria</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Soja">
+        <cultures:scientificName>Glycine max</cultures:scientificName>
+        <cultures:cropName>Soja</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Mucuna">
+        <cultures:scientificName>Mucuna pruriens</cultures:scientificName>
+        <cultures:cropName>Mucuna</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Crotalaria">
+        <cultures:scientificName>Crotalaria retusa</cultures:scientificName>
+        <cultures:cropName>Crotalaria</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Dolichos">
+        <cultures:scientificName>Dolichos lablab</cultures:scientificName>
+        <cultures:cropName>Dolichos</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#PalmierHuile">
+        <cultures:scientificName>Elaeis guineensis</cultures:scientificName>
+        <cultures:cropName>Palmier à huile</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Caoutchouc">
+        <cultures:scientificName>Hevea brasiliensis</cultures:scientificName>
+        <cultures:cropName>Caoutchouc</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#PommeDeTerre">
+        <cultures:scientificName>Solanum tuberosum</cultures:scientificName>
+        <cultures:cropName>Pomme de terre</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Poivre">
+        <cultures:scientificName>Piper nigrum</cultures:scientificName>
+        <cultures:cropName>Poivre</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Okra">
+        <cultures:scientificName>Abelmoschus esculentus</cultures:scientificName>
+        <cultures:cropName>Okra</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Macabo">
+        <cultures:scientificName>Xanthosoma sagittifolium</cultures:scientificName>
+        <cultures:cropName>Macabo</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Cacao">
+        <cultures:scientificName>Theobroma cacao</cultures:scientificName>
+        <cultures:cropName>Cacao</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Cola">
+        <cultures:scientificName>Cola spp.</cultures:scientificName>
+        <cultures:cropName>Cola</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Tournesol">
+        <cultures:scientificName>Helianthus annuus</cultures:scientificName>
+        <cultures:cropName>Tournesol</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Ndole">
+        <cultures:scientificName>Vernonia spp.</cultures:scientificName>
+        <cultures:cropName>Ndolé</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Mangue">
+        <cultures:scientificName>Mangifera indica</cultures:scientificName>
+        <cultures:cropName>Mangue</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Papaye">
+        <cultures:scientificName>Carica papaya</cultures:scientificName>
+        <cultures:cropName>Papaye</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Ananas">
+        <cultures:scientificName>Ananas comosus</cultures:scientificName>
+        <cultures:cropName>Ananas</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Avocat">
+        <cultures:scientificName>Persea americana</cultures:scientificName>
+        <cultures:cropName>Avocat</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Basilic">
+        <cultures:scientificName>Ocimum basilicum</cultures:scientificName>
+        <cultures:cropName>Basilic</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Gingembre">
+        <cultures:scientificName>Zingiber officinale</cultures:scientificName>
+        <cultures:cropName>Gingembre</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Citronnelle">
+        <cultures:scientificName>Cymbopogon citratus</cultures:scientificName>
+        <cultures:cropName>Citronnelle</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Goyave">
+        <cultures:scientificName>Psidium guajava</cultures:scientificName>
+        <cultures:cropName>Goyave</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Melon">
+        <cultures:scientificName>Cucumis melo</cultures:scientificName>
+        <cultures:cropName>Melon</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Pastèque">
+        <cultures:scientificName>Citrullus lanatus</cultures:scientificName>
+        <cultures:cropName>Pastèque</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Corossol">
+        <cultures:scientificName>Annona muricata</cultures:scientificName>
+        <cultures:cropName>Corossol</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Rambutan">
+        <cultures:scientificName>Nephelium lappaceum</cultures:scientificName>
+        <cultures:cropName>Rambutan</cultures:cropName>
+    </cultures:Crop>
+
+    <cultures:Crop rdf:about="http://example.org/cultures#Mangoustan">
+        <cultures:scientificName>Garcinia mangostana</cultures:scientificName>
+        <cultures:cropName>Mangoustan</cultures:cropName>
+    </cultures:Crop>
+
+</rdf:RDF> 

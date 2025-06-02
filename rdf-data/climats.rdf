@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:cultures="http://example.org/cultures#">
+
+    <!-- Définition de la classe Climat -->
+    <owl:Class rdf:about="http://example.org/cultures#Climate">
+        <rdfs:label xml:lang="fr">Type de Climat</rdfs:label>
+    </owl:Class>
+
+    <!-- Types de climats -->
+    <cultures:Climate rdf:about="http://example.org/cultures#Tropical">
+        <rdfs:label xml:lang="fr">Tropical</rdfs:label>
+        <rdfs:comment xml:lang="fr">Climat chaud et humide toute l'année</rdfs:comment>
+    </cultures:Climate>
+
+    <cultures:Climate rdf:about="http://example.org/cultures#TropicalHumide">
+        <rdfs:label xml:lang="fr">Tropical Humide</rdfs:label>
+        <rdfs:comment xml:lang="fr">Climat tropical avec forte humidité</rdfs:comment>
+    </cultures:Climate>
+
+    <cultures:Climate rdf:about="http://example.org/cultures#TropicalSec">
+        <rdfs:label xml:lang="fr">Tropical Sec</rdfs:label>
+        <rdfs:comment xml:lang="fr">Climat tropical avec faible précipitations</rdfs:comment>
+    </cultures:Climate>
+
+    <cultures:Climate rdf:about="http://example.org/cultures#SemiAride">
+        <rdfs:label xml:lang="fr">Semi-aride</rdfs:label>
+        <rdfs:comment xml:lang="fr">Climat sec avec peu de précipitations</rdfs:comment>
+    </cultures:Climate>
+
+    <cultures:Climate rdf:about="http://example.org/cultures#Temperé">
+        <rdfs:label xml:lang="fr">Tempéré</rdfs:label>
+        <rdfs:comment xml:lang="fr">Climat avec saisons distinctes</rdfs:comment>
+    </cultures:Climate>
+
+    <cultures:Climate rdf:about="http://example.org/cultures#TemperéChaud">
+        <rdfs:label xml:lang="fr">Tempéré Chaud</rdfs:label>
+        <rdfs:comment xml:lang="fr">Climat tempéré avec étés chauds</rdfs:comment>
+    </cultures:Climate>
+
+    <cultures:Climate rdf:about="http://example.org/cultures#TropicalTemperé">
+        <rdfs:label xml:lang="fr">Tropical à Tempéré</rdfs:label>
+        <rdfs:comment xml:lang="fr">Climat intermédiaire entre tropical et tempéré</rdfs:comment>
+    </cultures:Climate>
+
+</rdf:RDF> 

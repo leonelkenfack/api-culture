@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:cultures="http://example.org/cultures#">
+
+    <!-- Définition de la propriété isFollowedBy -->
+    <owl:ObjectProperty rdf:about="http://example.org/cultures#isFollowedBy">
+        <rdfs:label xml:lang="fr">est suivi par</rdfs:label>
+        <rdfs:domain rdf:resource="http://example.org/cultures#Family"/>
+        <rdfs:range rdf:resource="http://example.org/cultures#Family"/>
+    </owl:ObjectProperty>
+
+    <!-- Définition des relations de succession entre familles -->
+    <cultures:Family rdf:about="http://example.org/cultures#Fabacees">
+        <cultures:isFollowedBy rdf:resource="http://example.org/cultures#Solanacees"/>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Solanacees">
+        <cultures:isFollowedBy rdf:resource="http://example.org/cultures#Convolvulacees"/>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Convolvulacees">
+        <cultures:isFollowedBy rdf:resource="http://example.org/cultures#Poacees"/>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Poacees">
+        <cultures:isFollowedBy rdf:resource="http://example.org/cultures#Cucurbitacees"/>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Cucurbitacees">
+        <cultures:isFollowedBy rdf:resource="http://example.org/cultures#Dioscoreacees"/>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Dioscoreacees">
+        <cultures:isFollowedBy rdf:resource="http://example.org/cultures#Euphorbiacees"/>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Euphorbiacees">
+        <cultures:isFollowedBy rdf:resource="http://example.org/cultures#Malvacees"/>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Malvacees">
+        <cultures:isFollowedBy rdf:resource="http://example.org/cultures#Asteracees"/>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Asteracees">
+        <cultures:isFollowedBy rdf:resource="http://example.org/cultures#Lamiacees"/>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Lamiacees">
+        <cultures:isFollowedBy rdf:resource="http://example.org/cultures#Fabacees"/>
+    </cultures:Family>
+
+</rdf:RDF> 

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:cultures="http://example.org/cultures#">
+
+    <!-- Définition de la classe Nutriments -->
+    <owl:Class rdf:about="http://example.org/cultures#Nutrient">
+        <rdfs:label xml:lang="fr">Nutriment</rdfs:label>
+    </owl:Class>
+
+    <!-- Macronutriments -->
+    <cultures:Nutrient rdf:about="http://example.org/cultures#Azote">
+        <rdfs:label xml:lang="fr">Azote (N)</rdfs:label>
+        <rdfs:comment xml:lang="fr">Macronutriment essentiel pour la croissance des plantes</rdfs:comment>
+    </cultures:Nutrient>
+
+    <cultures:Nutrient rdf:about="http://example.org/cultures#Phosphore">
+        <rdfs:label xml:lang="fr">Phosphore (P)</rdfs:label>
+        <rdfs:comment xml:lang="fr">Macronutriment important pour le développement des racines et la floraison</rdfs:comment>
+    </cultures:Nutrient>
+
+    <cultures:Nutrient rdf:about="http://example.org/cultures#Potassium">
+        <rdfs:label xml:lang="fr">Potassium (K)</rdfs:label>
+        <rdfs:comment xml:lang="fr">Macronutriment essentiel pour la photosynthèse et la résistance aux maladies</rdfs:comment>
+    </cultures:Nutrient>
+
+    <cultures:Nutrient rdf:about="http://example.org/cultures#Soufre">
+        <rdfs:label xml:lang="fr">Soufre (S)</rdfs:label>
+        <rdfs:comment xml:lang="fr">Macronutriment nécessaire pour la synthèse des protéines</rdfs:comment>
+    </cultures:Nutrient>
+
+    <cultures:Nutrient rdf:about="http://example.org/cultures#Calcium">
+        <rdfs:label xml:lang="fr">Calcium (Ca)</rdfs:label>
+        <rdfs:comment xml:lang="fr">Macronutriment important pour la structure cellulaire</rdfs:comment>
+    </cultures:Nutrient>
+
+    <cultures:Nutrient rdf:about="http://example.org/cultures#Magnesium">
+        <rdfs:label xml:lang="fr">Magnésium (Mg)</rdfs:label>
+        <rdfs:comment xml:lang="fr">Macronutriment essentiel pour la photosynthèse</rdfs:comment>
+    </cultures:Nutrient>
+
+    <!-- Micronutriments -->
+    <cultures:Nutrient rdf:about="http://example.org/cultures#Zinc">
+        <rdfs:label xml:lang="fr">Zinc (Zn)</rdfs:label>
+        <rdfs:comment xml:lang="fr">Micronutriment important pour la croissance et le développement</rdfs:comment>
+    </cultures:Nutrient>
+
+    <cultures:Nutrient rdf:about="http://example.org/cultures#Fer">
+        <rdfs:label xml:lang="fr">Fer (Fe)</rdfs:label>
+        <rdfs:comment xml:lang="fr">Micronutriment essentiel pour la formation de la chlorophylle</rdfs:comment>
+    </cultures:Nutrient>
+
+    <cultures:Nutrient rdf:about="http://example.org/cultures#Manganese">
+        <rdfs:label xml:lang="fr">Manganèse (Mn)</rdfs:label>
+        <rdfs:comment xml:lang="fr">Micronutriment nécessaire pour la photosynthèse et le métabolisme</rdfs:comment>
+    </cultures:Nutrient>
+
+    <cultures:Nutrient rdf:about="http://example.org/cultures#Bore">
+        <rdfs:label xml:lang="fr">Bore (B)</rdfs:label>
+        <rdfs:comment xml:lang="fr">Micronutriment important pour la reproduction et le développement des fruits</rdfs:comment>
+    </cultures:Nutrient>
+
+    <cultures:Nutrient rdf:about="http://example.org/cultures#Cuivre">
+        <rdfs:label xml:lang="fr">Cuivre (Cu)</rdfs:label>
+        <rdfs:comment xml:lang="fr">Micronutriment essentiel pour la respiration et le métabolisme</rdfs:comment>
+    </cultures:Nutrient>
+
+    <cultures:Nutrient rdf:about="http://example.org/cultures#Molybdene">
+        <rdfs:label xml:lang="fr">Molybdène (Mo)</rdfs:label>
+        <rdfs:comment xml:lang="fr">Micronutriment nécessaire pour la fixation de l'azote</rdfs:comment>
+    </cultures:Nutrient>
+
+</rdf:RDF> 

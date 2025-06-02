@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:cultures="http://example.org/cultures#">
+
+    <!-- Définition de la classe Type -->
+    <owl:Class rdf:about="http://example.org/cultures#Type">
+        <rdfs:label xml:lang="fr">Type de Culture</rdfs:label>
+    </owl:Class>
+
+    <!-- Types de cultures -->
+    <cultures:Type rdf:about="http://example.org/cultures#Vivriere">
+        <rdfs:label xml:lang="fr">Vivrière</rdfs:label>
+        <rdfs:comment xml:lang="fr">Culture destinée à l'alimentation</rdfs:comment>
+    </cultures:Type>
+
+    <cultures:Type rdf:about="http://example.org/cultures#Rente">
+        <rdfs:label xml:lang="fr">Rente</rdfs:label>
+        <rdfs:comment xml:lang="fr">Culture destinée à la vente</rdfs:comment>
+    </cultures:Type>
+
+    <cultures:Type rdf:about="http://example.org/cultures#Couverture">
+        <rdfs:label xml:lang="fr">Couverture</rdfs:label>
+        <rdfs:comment xml:lang="fr">Culture de couverture du sol</rdfs:comment>
+    </cultures:Type>
+
+    <cultures:Type rdf:about="http://example.org/cultures#Medicinale">
+        <rdfs:label xml:lang="fr">Médicinale</rdfs:label>
+        <rdfs:comment xml:lang="fr">Culture à usage médicinal</rdfs:comment>
+    </cultures:Type>
+
+    <cultures:Type rdf:about="http://example.org/cultures#Aromatique">
+        <rdfs:label xml:lang="fr">Aromatique</rdfs:label>
+        <rdfs:comment xml:lang="fr">Culture à usage aromatique</rdfs:comment>
+    </cultures:Type>
+
+    <cultures:Type rdf:about="http://example.org/cultures#Oleagineux">
+        <rdfs:label xml:lang="fr">Oléagineux</rdfs:label>
+        <rdfs:comment xml:lang="fr">Culture pour la production d'huile</rdfs:comment>
+    </cultures:Type>
+
+    <cultures:Type rdf:about="http://example.org/cultures#LegumeFeuille">
+        <rdfs:label xml:lang="fr">Légume-feuille</rdfs:label>
+        <rdfs:comment xml:lang="fr">Culture dont les feuilles sont consommées</rdfs:comment>
+    </cultures:Type>
+
+    <cultures:Type rdf:about="http://example.org/cultures#Stimulante">
+        <rdfs:label xml:lang="fr">Stimulante</rdfs:label>
+        <rdfs:comment xml:lang="fr">Culture à effet stimulant</rdfs:comment>
+    </cultures:Type>
+
+</rdf:RDF> 

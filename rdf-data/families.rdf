@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:cultures="http://example.org/cultures#">
+
+    <!-- Définition de la classe Famille -->
+    <owl:Class rdf:about="http://example.org/cultures#Family">
+        <rdfs:label xml:lang="fr">Famille de Cultures</rdfs:label>
+    </owl:Class>
+
+    <!-- Familles de cultures -->
+    <cultures:Family rdf:about="http://example.org/cultures#Poacees">
+        <rdfs:label xml:lang="fr">Poacées (Graminées)</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille des graminées, incluant les céréales</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Fabacees">
+        <rdfs:label xml:lang="fr">Fabacées (Légumineuses)</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille des légumineuses, plantes fixatrices d'azote</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Musacees">
+        <rdfs:label xml:lang="fr">Musacées</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille des bananiers et plantains</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Euphorbiacees">
+        <rdfs:label xml:lang="fr">Euphorbiacées</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille incluant le manioc et le palmier à huile</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Dioscoreacees">
+        <rdfs:label xml:lang="fr">Dioscoreacées</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille des ignames</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Solanacees">
+        <rdfs:label xml:lang="fr">Solanacées</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille incluant la pomme de terre</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Piperaceae">
+        <rdfs:label xml:lang="fr">Piperaceae</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille du poivre</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Malvacees">
+        <rdfs:label xml:lang="fr">Malvacées</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille incluant le coton et l'okra</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Aracees">
+        <rdfs:label xml:lang="fr">Aracées</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille incluant le macabo et le taro</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Sterculiacees">
+        <rdfs:label xml:lang="fr">Sterculiacées</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille incluant le cacao et la cola</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Asteracees">
+        <rdfs:label xml:lang="fr">Asteracées (Composées)</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille incluant le tournesol et le ndolé</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Anacardiacees">
+        <rdfs:label xml:lang="fr">Anacardiacées</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille incluant la mangue</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Caricacees">
+        <rdfs:label xml:lang="fr">Caricacées</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille incluant la papaye</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Bromeliacees">
+        <rdfs:label xml:lang="fr">Broméliacées</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille incluant l'ananas</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Lauracees">
+        <rdfs:label xml:lang="fr">Lauracées</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille incluant l'avocat</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Lamiacees">
+        <rdfs:label xml:lang="fr">Lamiacées</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille incluant le basilic</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Zingiberacees">
+        <rdfs:label xml:lang="fr">Zingibéracées</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille incluant le gingembre</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Convolvulacees">
+        <rdfs:label xml:lang="fr">Convolvulacées</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille incluant la patate douce</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Myrtacees">
+        <rdfs:label xml:lang="fr">Myrtacées</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille incluant la goyave</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Cucurbitacees">
+        <rdfs:label xml:lang="fr">Cucurbitacées</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille incluant le melon et la pastèque</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Annonacees">
+        <rdfs:label xml:lang="fr">Annonacées</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille incluant le corossol</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Sapindacees">
+        <rdfs:label xml:lang="fr">Sapindacées</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille incluant le rambutan</rdfs:comment>
+    </cultures:Family>
+
+    <cultures:Family rdf:about="http://example.org/cultures#Clusiaceae">
+        <rdfs:label xml:lang="fr">Clusiaceae</rdfs:label>
+        <rdfs:comment xml:lang="fr">Famille incluant le mangoustan</rdfs:comment>
+    </cultures:Family>
+
+</rdf:RDF> 
