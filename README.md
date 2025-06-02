@@ -1,69 +1,28 @@
-# API Flask
+# API Rotation des Cultures
 
-Ce projet est une API REST construite avec Flask.
+Ce projet est une API REST construite avec Flask et deploye sur Docker. 
+Elle vous permet d'obtenir une liste de culture eligible a la rotation avec un score d'eligibilite detaille.
 
-## Installation
+## Installation et Lancement de l'application
 
-### Méthode 1 : Installation locale
-
-1. Créez un environnement virtuel :
-```bash
-python -m venv venv
-```
-
-2. Activez l'environnement virtuel :
-- Windows :
-```bash
-venv\Scripts\activate
-```
-- Linux/Mac :
-```bash
-source venv/bin/activate
-```
-
-3. Installez les dépendances :
-```bash
-pip install -r requirements.txt
-```
-
-### Méthode 2 : Utilisation de Docker
-
-#### Option 1 : Docker simple
-1. Construisez l'image Docker :
-```bash
-docker build -t api-flask .
-```
-
-2. Lancez le conteneur :
-```bash
-docker run -p 5000:5000 api-flask
-```
-
-#### Option 2 : Docker Compose (recommandé)
-1. Lancez l'application avec Docker Compose :
-```bash
-docker-compose up
-```
-
-Pour lancer en arrière-plan :
 ```bash
 docker-compose up -d
 ```
+## Ajout des donnes dans la base
 
-Pour arrêter l'application :
-```bash
-docker-compose down
-```
+Une fois le serveur lance, suivez les etapes suivantes : 
 
-## Lancement de l'application
+1. Creer un repository nomme `cultures`.
+2. Allez dans import et importez tous les fichiers rdf dans rdf-data. (`rotations.rdf` et `relations.rdf` en derniers)
 
-### Sans Docker
-Pour lancer l'application en mode développement :
-```bash
-python app.py
-```
 
-### Avec Docker
-L'application sera automatiquement lancée lors du démarrage du conteneur.
+NB: Lors de l'import des fichiers `.rdf`, renseigner le `Base IRI` avec la valeur ` http://example.org/cultures#`
 
-L'API sera accessible à l'adresse : http://localhost:5000 
+
+
+
+## Liste des serveurs
+
+* Flask DOC : http://localhost:5200/api/doc
+* GraphDB : http://localhost:7200 
+

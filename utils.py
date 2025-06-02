@@ -327,6 +327,20 @@ class RotationManager:
             return percentage
         return 0.0
 
+    def get_cultures(family_name, region_name, climate_name):
+        cultures_0 = rotation_manager.get_family_crops_in_region_and_climate(family_name, region_name, climate_name)
+        cultures = [{'culture': culture, 'score': 3} for culture in cultures_0]
+        if len(cultures) < 3:
+            cultures_1 = rotation_manager.get_family_crops_in_region(family_name, region_name)
+            for culture in cultures_1:
+                if not any(c['culture'] == culture for c in cultures):
+                    cultures.append({'culture': culture, 'total_score': 2})
+            if len(cultures) < 3:
+                cultures_2 = rotation_manager.get_family_crops(family_name)     
+                for culture in cultures_2:
+                    if not any(c['culture'] == culture for c in cultures):
+                        cultures.append({'culture': culture, 'total_score': 1})
+        return cultures
 
 # Exemple d'utilisation
 if __name__ == "__main__":

@@ -1,70 +1,86 @@
 from flask import Flask, jsonify, request
+from flask_restx import Api, Resource, fields
 from utils import RotationManager
 
 app = Flask(__name__)
+api = Api(
+    app,
+    version='1.0',
+    title='API de Rotation des Cultures',
+    description='API pour analyser les rotations de cultures agricoles',
+    doc='/api/doc'
+)
+
+ns = api.namespace('api/v1', description='Chemin api')
+
+rotation_input = api.model('RotationInput', {
+    'culture_name': fields.String(required=True, description='Nom de la culture actuelle'),
+    'region_name': fields.String(required=True, description='Nom de la région'),
+    'climate_name': fields.String(required=True, description='Type de climat')
+})
+
+culture_model = api.model('Culture', {
+    'culture': fields.String(description='Nom de la culture'),
+    'total_score': fields.Float(description='Score total de compatibilité'),
+    'sensitivity_to_disease_created_percentage': fields.Float(description='Pourcentage de sensibilité aux maladies créées'),
+    'created_disease_can_be_corrected_percentage': fields.Float(description='Pourcentage de maladies pouvant être corrigées'),
+    'nutrient_adds_can_be_consumed_percentage': fields.Float(description='Pourcentage de nutriments ajoutés pouvant être consommés'),
+    'nutrient_consumes_can_be_added_percentage': fields.Float(description='Pourcentage de nutriments consommés pouvant être ajoutés')
+})
+
+rotation_response = api.model('RotationResponse', {
+    'cultures': fields.List(fields.Nested(culture_model)),
+    'status': fields.String(description='Statut de la requête')
+})
+
 rotation_manager = RotationManager()
 
-def get_cultures(family_name, region_name, climate_name):
-    cultures_0 = rotation_manager.get_family_crops_in_region_and_climate(family_name, region_name, climate_name)
-    cultures = [{'culture': culture, 'score': 3} for culture in cultures_0]
-    if len(cultures) < 3:
-        cultures_1 = rotation_manager.get_family_crops_in_region(family_name, region_name)
-        for culture in cultures_1:
-            if not any(c['culture'] == culture for c in cultures):
-                cultures.append({'culture': culture, 'total_score': 2})
-        if len(cultures) < 3:
-            cultures_2 = rotation_manager.get_family_crops(family_name)     
-            for culture in cultures_2:
-                if not any(c['culture'] == culture for c in cultures):
-                    cultures.append({'culture': culture, 'total_score': 1})
-    return cultures
+@ns.route('/rotation')
+class Rotation(Resource):
+    @ns.expect(rotation_input)
+    @ns.marshal_with(rotation_response)
+    @ns.doc('get_rotation',
+            description='Obtient les cultures recommandées pour la rotation',
+            responses={
+                200: 'Succès',
+                400: 'Paramètres invalides',
+                404: 'Culture non trouvée'
+            })
+    def post(self):
+        data = request.json
+        culture_name = data.get('culture_name')
+        region_name = data.get('region_name')
+        climate_name = data.get('climate_name')
 
-@app.route('/')
-def home():
-    return jsonify({
-        "message": "Bienvenue sur l'API",
-        "status": "success"
-    })
+        if not culture_name or not region_name or not climate_name:
+            return jsonify({
+                "message": "Les champs culture_name, region_name et climate_name sont requis",
+                "status": "error"
+            })
 
-@app.route('/api/rotation', methods=['POST'])
-def get_rotation():
-    data = request.json
-    culture_name = data.get('culture_name')
-    region_name = data.get('region_name')
-    climate_name = data.get('climate_name')
+        family = rotation_manager.get_culture_family(culture_name)
+        next_family = rotation_manager.get_next_family(family)
+        cultures = rotation_manager.get_cultures(next_family, region_name, climate_name)
+        
+        for culture in cultures:
+            disease_created_percentage = rotation_manager.get_disease_created_impact_percentage(culture_name, culture['culture'])
+            culture['total_score'] += disease_created_percentage/10
+            culture['sensitivity_to_disease_created_percentage'] = disease_created_percentage
+            disease_correction_percentage = rotation_manager.get_disease_correction_percentage(culture_name, culture['culture'])
+            culture['total_score'] += disease_correction_percentage/10
+            culture['created_disease_can_be_corrected_percentage'] = disease_correction_percentage
+            nutrient_percentage_adds_to_consumes = rotation_manager.get_nutrient_percentage_adds_to_consumes(culture_name, culture['culture'])
+            culture['total_score'] += nutrient_percentage_adds_to_consumes/20
+            culture['nutrient_adds_can_be_consumed_percentage'] = nutrient_percentage_adds_to_consumes
+            nutrient_percentage_consumes_to_adds = rotation_manager.get_nutrient_percentage_consumes_to_adds(culture_name, culture['culture'])
+            culture['total_score'] += nutrient_percentage_consumes_to_adds/10
+            culture['nutrient_consumes_can_be_added_percentage'] = nutrient_percentage_consumes_to_adds
 
-    if not culture_name or not region_name or not climate_name:
-        return jsonify({
-            "message": "Les champs culture_name, region_name et climate_name sont requis",
-            "status": "error"
-        })
-
-    family = rotation_manager.get_culture_family(culture_name)
-    next_family = rotation_manager.get_next_family(family)
-    cultures = get_cultures(next_family, region_name, climate_name)
-    
-    for culture in cultures:
-        # culture['score'] = 0
-        disease_created_percentage = rotation_manager.get_disease_created_impact_percentage(culture_name, culture['culture'])
-        culture['total_score'] += disease_created_percentage/10
-        culture['sensitivity_to_disease_created_percentage'] = disease_created_percentage
-        disease_correction_percentage = rotation_manager.get_disease_correction_percentage(culture_name, culture['culture'])
-        culture['total_score'] += disease_correction_percentage/10
-        culture['created_disease_can_be_corrected_percentage'] = disease_correction_percentage
-        nutrient_percentage_adds_to_consumes = rotation_manager.get_nutrient_percentage_adds_to_consumes(culture_name, culture['culture'])
-        culture['total_score'] += nutrient_percentage_adds_to_consumes/20
-        culture['nutrient_adds_can_be_consumed_percentage'] = nutrient_percentage_adds_to_consumes
-        nutrient_percentage_consumes_to_adds = rotation_manager.get_nutrient_percentage_consumes_to_adds(culture_name, culture['culture'])
-        culture['total_score'] += nutrient_percentage_consumes_to_adds/10
-        culture['nutrient_consumes_can_be_added_percentage'] = nutrient_percentage_consumes_to_adds
-
-
-    return jsonify({
-        "cultures": cultures,
-        "status": "success" if family else "not_found"
-    })
-
+        return {
+            "cultures": cultures,
+            "status": "success" if family else "not_found"
+        }
 
 
 if __name__ == '__main__':
-    app.run(debug=True) 
+    app.run(debug=True)
