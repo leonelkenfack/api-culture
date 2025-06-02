@@ -130,16 +130,16 @@ class Rotation(Resource):
         
         for culture in cultures:
             disease_created_percentage = rotation_manager.get_disease_created_impact_percentage(culture_name, culture['culture'])
-            culture['total_score'] += disease_created_percentage/10
+            culture['total_score'] += (1 - disease_created_percentage/100)*0.325
             culture['sensitivity_to_disease_created_percentage'] = disease_created_percentage
             disease_correction_percentage = rotation_manager.get_disease_correction_percentage(culture_name, culture['culture'])
-            culture['total_score'] += disease_correction_percentage/10
+            culture['total_score'] += (disease_correction_percentage/100)*0.225
             culture['created_disease_can_be_corrected_percentage'] = disease_correction_percentage
             nutrient_percentage_adds_to_consumes = rotation_manager.get_nutrient_percentage_adds_to_consumes(culture_name, culture['culture'])
-            culture['total_score'] += nutrient_percentage_adds_to_consumes/20
+            culture['total_score'] += (nutrient_percentage_adds_to_consumes/100)*0.1
             culture['nutrient_adds_can_be_consumed_percentage'] = nutrient_percentage_adds_to_consumes
             nutrient_percentage_consumes_to_adds = rotation_manager.get_nutrient_percentage_consumes_to_adds(culture_name, culture['culture'])
-            culture['total_score'] += nutrient_percentage_consumes_to_adds/10
+            culture['total_score'] += (nutrient_percentage_consumes_to_adds/100)*0.15
             culture['nutrient_consumes_can_be_added_percentage'] = nutrient_percentage_consumes_to_adds
 
         return {

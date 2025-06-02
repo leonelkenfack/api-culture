@@ -284,7 +284,7 @@ class RotationManager:
         
         for result in results["results"]["bindings"]:
             percentage = float(result["percentage"]["value"])
-            return (-1)*percentage
+            return percentage
         return 0.0
 
     def get_disease_correction_percentage(self, crop1_name, crop2_name):
@@ -327,19 +327,19 @@ class RotationManager:
             return percentage
         return 0.0
 
-    def get_cultures(family_name, region_name, climate_name):
-        cultures_0 = rotation_manager.get_family_crops_in_region_and_climate(family_name, region_name, climate_name)
-        cultures = [{'culture': culture, 'score': 3} for culture in cultures_0]
+    def get_cultures(self, family_name, region_name, climate_name):
+        cultures_0 = self.get_family_crops_in_region_and_climate(family_name, region_name, climate_name)
+        cultures = [{'culture': culture, 'score': 0.2} for culture in cultures_0]
         if len(cultures) < 3:
-            cultures_1 = rotation_manager.get_family_crops_in_region(family_name, region_name)
+            cultures_1 = self.get_family_crops_in_region(family_name, region_name)
             for culture in cultures_1:
                 if not any(c['culture'] == culture for c in cultures):
-                    cultures.append({'culture': culture, 'total_score': 2})
+                    cultures.append({'culture': culture, 'total_score': 0.1})
             if len(cultures) < 3:
-                cultures_2 = rotation_manager.get_family_crops(family_name)     
+                cultures_2 = self.get_family_crops(family_name)     
                 for culture in cultures_2:
                     if not any(c['culture'] == culture for c in cultures):
-                        cultures.append({'culture': culture, 'total_score': 1})
+                        cultures.append({'culture': culture, 'total_score': 0})
         return cultures
 
 # Exemple d'utilisation
