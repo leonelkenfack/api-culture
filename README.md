@@ -16,7 +16,7 @@ Une fois le serveur lance, suivez les etapes suivantes :
 2. Allez dans import et importez tous les fichiers rdf dans rdf-data. (`rotations.rdf` et `relations.rdf` en derniers)
 
 
-NB: Lors de l'import des fichiers `.rdf`, renseigner le `Base IRI` avec la valeur ` http://example.org/cultures#`
+NB: Lors de l'import des fichiers `.rdf`, renseigner le `Base IRI` avec la valeur `http://example.org/cultures#`
 
 
 

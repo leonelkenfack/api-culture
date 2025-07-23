@@ -1,6 +1,13 @@
 from flask import Flask, jsonify, request
 from flask_restx import Api, Resource, fields
 from utils import RotationManager
+import numpy as np
+import joblib
+import pickle
+from sklearn.preprocessing import OneHotEncoder
+
+
+import pandas as pd
 
 app = Flask(__name__)
 api = Api(
@@ -147,6 +154,20 @@ class Rotation(Resource):
             "status": "success" if family else "not_found"
         }
 
+    
+model = joblib.load('model.pkl')
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    data = request.get_json(force=True)
+    
+    # Convertir en DataFrame pour garder les noms de colonnes
+    input_df = pd.DataFrame([data])
+
+    # Prédiction
+    prediction = model.predict(input_df)
+    
+    return jsonify({'prediction': prediction.tolist()})
 
 if __name__ == '__main__':
     app.run(debug=True)
