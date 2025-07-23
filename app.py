@@ -1,10 +1,7 @@
 from flask import Flask, jsonify, request
 from flask_restx import Api, Resource, fields
 from utils import RotationManager
-import numpy as np
 import joblib
-import pickle
-from sklearn.preprocessing import OneHotEncoder
 
 
 import pandas as pd
