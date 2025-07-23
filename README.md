@@ -5,6 +5,12 @@ Elle vous permet d'obtenir une liste de culture eligible a la rotation avec un s
 
 ## Installation et Lancement de l'application
 
+Vous devez creer le fichier `.env`et renseigner le `GRAPHDB_URL`. Avec les configuration actuelle du fichier `docker-compose.yml`, vous aurez :
+```yml
+GRAPHDB_URL=http://graphdb-instance-name:7200/repositories/cultures
+```
+Par la suite, demarrer le serveur 
+
 ```bash
 docker-compose up -d
 ```
